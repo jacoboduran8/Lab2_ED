@@ -1,0 +1,53 @@
+module Ejercicio12(iBCD, oLED, oHEX1, oHEX5);
+input  [3:0] iBCD;
+output [3:0] oLED;
+output [6:0] oHEX1;
+output [6:0] oHEX5;
+
+wire error;
+
+detector_error IC01(.iA(iBCD), .oErr(error));
+bcd_exceso3    IC02(.iA(iBCD), .iErr(error), .oE3(oLED));
+deco_bcd7seg   IC03(.iA(iBCD), .iErr(error), .oSeg(oHEX1));
+deco_error     IC04(.iErr(error), .oSeg(oHEX5));
+endmodule
+
+module detector_error(iA, oErr);
+input  [3:0] iA;
+output       oErr;
+assign oErr = iA[3] & (iA[2] | iA[1]);
+endmodule
+
+input  [3:0] iA;
+input        iErr;
+output [3:0] oE3;
+wire   [3:0] e3;
+assign e3[3] = iA[3] | (iA[2] & (iA[1] | iA[0]));
+assign e3[2] = (~iA[2] & (iA[1] | iA[0])) | (iA[2] & ~iA[1] & ~iA[0]);
+assign e3[1] = ~(iA[1] ^ iA[0]);
+assign e3[0] = ~iA[0];
+assign oE3   = e3 & {4{~iErr}};
+endmodule
+
+module deco_bcd7seg(iA, iErr, oSeg);
+input  [3:0] iA;
+input        iErr;
+output [6:0] oSeg;
+assign oSeg = iErr         ? 7'b1111111 :
+              (iA == 4'd0) ? 7'b1000000 :
+              (iA == 4'd1) ? 7'b1111001 :
+              (iA == 4'd2) ? 7'b0100100 :
+              (iA == 4'd3) ? 7'b0110000 :
+              (iA == 4'd4) ? 7'b0011001 :
+              (iA == 4'd5) ? 7'b0010010 :
+              (iA == 4'd6) ? 7'b0000010 :
+              (iA == 4'd7) ? 7'b1111000 :
+              (iA == 4'd8) ? 7'b0000000 :
+                             7'b0011000 ;
+endmodule
+
+module deco_error(iErr, oSeg);
+input        iErr;
+output [6:0] oSeg;
+assign oSeg = iErr ? 7'b0000110 : 7'b1111111;
+endmodule

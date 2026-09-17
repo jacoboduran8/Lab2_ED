@@ -1,0 +1,46 @@
+# Reading C:/altera/13.1/modelsim_ase/win32aloem/modelsim_ase/tcl/vsim/pref.tcl 
+# do Ejercicio11_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.1/Lab2/Ejercicio11 {C:/altera/13.1/Lab2/Ejercicio11/Ejercicio11.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Ejercicio11
+# -- Compiling module mydeco3to6
+# -- Compiling module mymux4to4
+# -- Compiling module mydeco_display7
+# 
+# Top level modules:
+# 	Ejercicio11
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.1/Lab2/Ejercicio11 {C:/altera/13.1/Lab2/Ejercicio11/tb_Ejercicio11.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_Ejercicio11
+# 
+# Top level modules:
+# 	tb_Ejercicio11
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_Ejercicio11
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_Ejercicio11 
+# Loading work.tb_Ejercicio11
+# Loading work.Ejercicio11
+# Loading work.mydeco3to6
+# Loading work.mymux4to4
+# Loading work.mydeco_display7
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break in Module tb_Ejercicio11 at C:/altera/13.1/Lab2/Ejercicio11/tb_Ejercicio11.v line 14
+# Simulation Breakpoint: Break in Module tb_Ejercicio11 at C:/altera/13.1/Lab2/Ejercicio11/tb_Ejercicio11.v line 14
+# MACRO ./Ejercicio11_run_msim_rtl_verilog.do PAUSED at line 17

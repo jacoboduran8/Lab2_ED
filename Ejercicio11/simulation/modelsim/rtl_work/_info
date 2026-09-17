@@ -1,0 +1,107 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.1\Lab2\Ejercicio11\simulation\modelsim
+vEjercicio11
+IR^H?zd[SYDEA?7_k5Lomz3
+V<Nnb;i^hQS;UWo33BAc3:0
+Z1 dC:\altera\13.1\Lab2\Ejercicio11\simulation\modelsim
+Z2 w1789664458
+Z3 8C:/altera/13.1/Lab2/Ejercicio11/Ejercicio11.v
+Z4 FC:/altera/13.1/Lab2/Ejercicio11/Ejercicio11.v
+L0 1
+Z5 OV;L;10.1d;51
+r1
+31
+Z6 !s108 1789667063.344000
+Z7 !s107 C:/altera/13.1/Lab2/Ejercicio11/Ejercicio11.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.1/Lab2/Ejercicio11|C:/altera/13.1/Lab2/Ejercicio11/Ejercicio11.v|
+Z9 o-vlog01compat -work work -O0
+Z10 !s92 -vlog01compat -work work +incdir+C:/altera/13.1/Lab2/Ejercicio11 -O0
+n@ejercicio11
+!i10b 1
+!s100 84biNVenj8AJ[m<]=>0a[0
+!s85 0
+!s101 -O0
+vmydeco3to6
+I6ITK>JYfN6J_X8:He<@UK1
+VEnzH@AYXkeEFV`7cJA7ON0
+R1
+R2
+R3
+R4
+L0 28
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 ke4I^N6Vjg]SVRk=Jg24U2
+!s85 0
+!s101 -O0
+vmydeco_display7
+I>4DmQY3YUYdi386ml3;fo1
+VRR9K0JGRzHEV@h::=8?cO1
+R1
+R2
+R3
+R4
+L0 54
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 Nl5W=aFbeQb^i=iaDViR`3
+!s85 0
+!s101 -O0
+vmymux4to4
+ITZhjQ4n6b0z<:^_QHO[ce0
+V:?E`jE>nkiGAG0kjAQgAY0
+R1
+R2
+R3
+R4
+L0 47
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 5BVjeejb8kW16`hLXO9nF3
+!s85 0
+!s101 -O0
+vtb_Ejercicio11
+!i10b 1
+!s100 B3n4lPS9Q;M_1S0[NOkO`1
+IW:kJT`Wl<O^Fmb2OHV;`=3
+VSMV[_d0efKi1;R]?IAl>W0
+R1
+w1789665889
+8C:/altera/13.1/Lab2/Ejercicio11/tb_Ejercicio11.v
+FC:/altera/13.1/Lab2/Ejercicio11/tb_Ejercicio11.v
+L0 2
+R5
+r1
+!s85 0
+31
+!s108 1789667063.493000
+!s107 C:/altera/13.1/Lab2/Ejercicio11/tb_Ejercicio11.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.1/Lab2/Ejercicio11|C:/altera/13.1/Lab2/Ejercicio11/tb_Ejercicio11.v|
+!s101 -O0
+R9
+R10
+ntb_@ejercicio11

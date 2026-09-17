@@ -1,0 +1,123 @@
+|Ejercicio12
+iBCD[0] => iBCD[0].IN3
+iBCD[1] => iBCD[1].IN3
+iBCD[2] => iBCD[2].IN3
+iBCD[3] => iBCD[3].IN3
+oLED[0] << bcd_exceso3:IC02.oE3
+oLED[1] << bcd_exceso3:IC02.oE3
+oLED[2] << bcd_exceso3:IC02.oE3
+oLED[3] << bcd_exceso3:IC02.oE3
+oHEX1[0] << deco_bcd7seg:IC03.oSeg
+oHEX1[1] << deco_bcd7seg:IC03.oSeg
+oHEX1[2] << deco_bcd7seg:IC03.oSeg
+oHEX1[3] << deco_bcd7seg:IC03.oSeg
+oHEX1[4] << deco_bcd7seg:IC03.oSeg
+oHEX1[5] << deco_bcd7seg:IC03.oSeg
+oHEX1[6] << deco_bcd7seg:IC03.oSeg
+oHEX5[0] << deco_error:IC04.oSeg
+oHEX5[1] << deco_error:IC04.oSeg
+oHEX5[2] << deco_error:IC04.oSeg
+oHEX5[3] << deco_error:IC04.oSeg
+oHEX5[4] << deco_error:IC04.oSeg
+oHEX5[5] << deco_error:IC04.oSeg
+oHEX5[6] << deco_error:IC04.oSeg
+
+
+|Ejercicio12|detector_error:IC01
+iA[0] => ~NO_FANOUT~
+iA[1] => oErr.IN0
+iA[2] => oErr.IN1
+iA[3] => oErr.IN1
+oErr <= oErr.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ejercicio12|bcd_exceso3:IC02
+iA[0] => e3.IN0
+iA[0] => e3.IN0
+iA[0] => oE3.IN0
+iA[0] => e3.IN1
+iA[1] => e3.IN1
+iA[1] => e3.IN1
+iA[1] => e3.IN0
+iA[2] => e3.IN1
+iA[2] => e3.IN1
+iA[2] => e3.IN1
+iA[3] => e3[3].IN1
+iErr => oE3.IN1
+iErr => oE3.IN1
+iErr => oE3.IN1
+iErr => oE3.IN1
+oE3[0] <= oE3.DB_MAX_OUTPUT_PORT_TYPE
+oE3[1] <= oE3.DB_MAX_OUTPUT_PORT_TYPE
+oE3[2] <= oE3.DB_MAX_OUTPUT_PORT_TYPE
+oE3[3] <= oE3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ejercicio12|deco_bcd7seg:IC03
+iA[0] => Equal0.IN3
+iA[0] => Equal1.IN0
+iA[0] => Equal2.IN3
+iA[0] => Equal3.IN1
+iA[0] => Equal4.IN3
+iA[0] => Equal5.IN1
+iA[0] => Equal6.IN3
+iA[0] => Equal7.IN2
+iA[0] => Equal8.IN3
+iA[1] => Equal0.IN2
+iA[1] => Equal1.IN3
+iA[1] => Equal2.IN0
+iA[1] => Equal3.IN0
+iA[1] => Equal4.IN2
+iA[1] => Equal5.IN3
+iA[1] => Equal6.IN1
+iA[1] => Equal7.IN1
+iA[1] => Equal8.IN2
+iA[2] => Equal0.IN1
+iA[2] => Equal1.IN2
+iA[2] => Equal2.IN2
+iA[2] => Equal3.IN3
+iA[2] => Equal4.IN0
+iA[2] => Equal5.IN0
+iA[2] => Equal6.IN0
+iA[2] => Equal7.IN0
+iA[2] => Equal8.IN1
+iA[3] => Equal0.IN0
+iA[3] => Equal1.IN1
+iA[3] => Equal2.IN1
+iA[3] => Equal3.IN2
+iA[3] => Equal4.IN1
+iA[3] => Equal5.IN2
+iA[3] => Equal6.IN2
+iA[3] => Equal7.IN3
+iA[3] => Equal8.IN0
+iErr => oSeg.OUTPUTSELECT
+iErr => oSeg.OUTPUTSELECT
+iErr => oSeg.OUTPUTSELECT
+iErr => oSeg.OUTPUTSELECT
+iErr => oSeg.OUTPUTSELECT
+iErr => oSeg.OUTPUTSELECT
+iErr => oSeg.OUTPUTSELECT
+oSeg[0] <= oSeg.DB_MAX_OUTPUT_PORT_TYPE
+oSeg[1] <= oSeg.DB_MAX_OUTPUT_PORT_TYPE
+oSeg[2] <= oSeg.DB_MAX_OUTPUT_PORT_TYPE
+oSeg[3] <= oSeg.DB_MAX_OUTPUT_PORT_TYPE
+oSeg[4] <= oSeg.DB_MAX_OUTPUT_PORT_TYPE
+oSeg[5] <= oSeg.DB_MAX_OUTPUT_PORT_TYPE
+oSeg[6] <= oSeg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ejercicio12|deco_error:IC04
+iErr => oSeg[6].DATAIN
+iErr => oSeg[5].DATAIN
+iErr => oSeg[4].DATAIN
+iErr => oSeg[3].DATAIN
+iErr => oSeg[0].DATAIN
+oSeg[0] <= iErr.DB_MAX_OUTPUT_PORT_TYPE
+oSeg[1] <= <VCC>
+oSeg[2] <= <VCC>
+oSeg[3] <= iErr.DB_MAX_OUTPUT_PORT_TYPE
+oSeg[4] <= iErr.DB_MAX_OUTPUT_PORT_TYPE
+oSeg[5] <= iErr.DB_MAX_OUTPUT_PORT_TYPE
+oSeg[6] <= iErr.DB_MAX_OUTPUT_PORT_TYPE
+
+
