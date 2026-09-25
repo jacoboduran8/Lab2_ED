@@ -1,0 +1,187 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.1\Lab2\Ejercicio13\simulation\modelsim
+vcomparador5
+IXgEl_THeb<o@ETF=0gz_63
+V7SaD=K8oeD3YY@8m_?fLJ3
+Z1 dC:\altera\13.1\Lab2\Ejercicio13\simulation\modelsim
+Z2 w1790270269
+Z3 8C:/altera/13.1/Lab2/Ejercicio13/Ejercicio13.v
+Z4 FC:/altera/13.1/Lab2/Ejercicio13/Ejercicio13.v
+L0 60
+Z5 OV;L;10.1d;51
+r1
+31
+Z6 !s108 1790271072.137000
+Z7 !s107 C:/altera/13.1/Lab2/Ejercicio13/Ejercicio13.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.1/Lab2/Ejercicio13|C:/altera/13.1/Lab2/Ejercicio13/Ejercicio13.v|
+Z9 o-vlog01compat -work work -O0
+Z10 !s92 -vlog01compat -work work +incdir+C:/altera/13.1/Lab2/Ejercicio13 -O0
+!i10b 1
+!s100 `Rkh[SIeKXaW3=`ID=QbY2
+!s85 0
+!s101 -O0
+vdeco_hex7seg
+I62X8kJ?BTJclL]bhWj[Ib1
+VD;0@_nO;<2c2P:6JW5JoN0
+R1
+R2
+R3
+R4
+L0 80
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 EoS769;27bXIPz_;Hc@ZB2
+!s85 0
+!s101 -O0
+vEjercicio13
+I6[=>9CKRJ2Tl;^:UT0=@D1
+VMM@bOi8bVW@:;zRJY]l]70
+R1
+R2
+R3
+R4
+L0 2
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@ejercicio13
+!i10b 1
+!s100 602ZBhPMEN:d5;<oGaF^W1
+!s85 0
+!s101 -O0
+vmux5a1_6b
+ITiA>XYeI_Y=f>Pfm7A=3C2
+VB90zF6fmLJBZ4FXoomh;l2
+R1
+R2
+R3
+R4
+L0 67
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 LRaj^6ZB?4j=DPNz>?R6H2
+!s85 0
+!s101 -O0
+vop_and
+IYThzT5d5V8V5GL6oUeP@32
+V_fdkz^lNQ;GFf7I[ADdV72
+R1
+R2
+R3
+R4
+L0 53
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 l36IV^FLNSNfGJCcj5nnE2
+!s85 0
+!s101 -O0
+vop_not
+Ike>^0PBVaBX]fFIbT@n`<2
+VTz9Sm3EDE^lW3YFB<Zm;b2
+R1
+R2
+R3
+R4
+L0 32
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 13?SI=M`VclA_c3f?cZY<0
+!s85 0
+!s101 -O0
+vop_transfer
+IlgCgad@9SHEzWQcDG8V:J2
+VSkeNDlz63od`FX=G]TjAX0
+R1
+R2
+R3
+R4
+L0 46
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 jd_O5NLo8zASo:I7@GF:J0
+!s85 0
+!s101 -O0
+vsumador5
+I7ajSm?_:LQdiJaU?>n94h0
+VdbF7<RW_c:`EEglziZXo13
+R1
+R2
+R3
+R4
+L0 39
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+!i10b 1
+!s100 b0H`Co8G9h9Eii30FS5^b0
+!s85 0
+!s101 -O0
+vtb_Ejercicio13
+!i10b 1
+!s100 Y;kISoO2dXn`?ZPIOm=_e1
+InTz=67zgV?PIZ8ZYi6MKF1
+V?N8D@U3I4Ma@F2<Y:Q?Fi1
+R1
+w1790270987
+8C:/altera/13.1/Lab2/Ejercicio13/tb_Ejercicio13.v
+FC:/altera/13.1/Lab2/Ejercicio13/tb_Ejercicio13.v
+L0 3
+R5
+r1
+!s85 0
+31
+!s108 1790271072.336000
+!s107 C:/altera/13.1/Lab2/Ejercicio13/tb_Ejercicio13.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.1/Lab2/Ejercicio13|C:/altera/13.1/Lab2/Ejercicio13/tb_Ejercicio13.v|
+!s101 -O0
+R9
+R10
+ntb_@ejercicio13

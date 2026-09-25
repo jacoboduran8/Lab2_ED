@@ -1,0 +1,99 @@
+
+module Ejercicio13(iA, iB, iKEY, oLED, oHEX0, oHEX1);
+input  [4:0] iA;        // SW[4:0]: operando A
+input  [4:0] iB;        // SW[9:5]: operando B
+input  [2:0] iKEY;      // KEY[2:0]: selección de operación (activos en 0)
+output [5:0] oLED;      // LEDR[5:0]: resultado (LEDR5 = carry)
+output [6:0] oHEX0;     // Display 1: dígito hexadecimal bajo
+output [6:0] oHEX1;     // Display 2: dígito hexadecimal alto
+
+wire [2:0] sel;
+wire [5:0] r_not, r_suma, r_b, r_and, r_menor;
+wire [5:0] resultado;
+
+assign sel = ~iKEY;     // Los pulsadores entregan 0 al presionarse
+
+op_not      IC01(.iA(iA), .oY(r_not));
+sumador5    IC02(.iA(iA), .iB(iB), .oY(r_suma));
+op_transfer IC03(.iB(iB), .oY(r_b));
+op_and      IC04(.iA(iA), .iB(iB), .oY(r_and));
+comparador5 IC05(.iA(iA), .iB(iB), .oY(r_menor));
+
+mux5a1_6b   IC06(.iSel(sel), .iD0(r_not), .iD1(r_suma), .iD2(r_b),
+                 .iD3(r_and), .iD4(r_menor), .oY(resultado));
+
+assign oLED = resultado;
+
+deco_hex7seg IC07(.iA(resultado[3:0]),          .oSeg(oHEX0));
+deco_hex7seg IC08(.iA({2'b00, resultado[5:4]}), .oSeg(oHEX1));
+endmodule
+
+// Ítem 8: NOT bit a bit. F = A' (carry = 0)
+module op_not(iA, oY);
+input  [4:0] iA;
+output [5:0] oY;
+assign oY = {1'b0, ~iA};
+endmodule
+
+// Ítem 2: SUMADOR de 5 bits. {Cout, F} = A + B
+module sumador5(iA, iB, oY);
+input  [4:0] iA, iB;
+output [5:0] oY;
+assign oY = iA + iB;    // oY[5] es el carry out
+endmodule
+
+// Ítem 7: TRANSFERENCIA. F = B (carry = 0)
+module op_transfer(iB, oY);
+input  [4:0] iB;
+output [5:0] oY;
+assign oY = {1'b0, iB};
+endmodule
+
+// Ítem C: AND bit a bit. F = A · B (carry = 0)
+module op_and(iA, iB, oY);
+input  [4:0] iA, iB;
+output [5:0] oY;
+assign oY = {1'b0, iA & iB};
+endmodule
+
+// Ítem E: COMPARADOR. F = 1 si A < B, si no F = 0
+module comparador5(iA, iB, oY);
+input  [4:0] iA, iB;
+output [5:0] oY;
+assign oY = {5'b00000, (iA < iB)};
+endmodule
+
+// MULTIPLEXOR 5 a 1 de 6 bits (operador condicional)
+module mux5a1_6b(iSel, iD0, iD1, iD2, iD3, iD4, oY);
+input  [2:0] iSel;
+input  [5:0] iD0, iD1, iD2, iD3, iD4;
+output [5:0] oY;
+assign oY = (iSel == 3'd0) ? iD0 :
+            (iSel == 3'd1) ? iD1 :
+            (iSel == 3'd2) ? iD2 :
+            (iSel == 3'd3) ? iD3 :
+            (iSel == 3'd4) ? iD4 :
+                             6'b000000;
+endmodule
+
+// DECODIFICADOR HEXADECIMAL a 7 SEGMENTOS (flujo de datos)
+module deco_hex7seg(iA, oSeg);
+input  [3:0] iA;
+output [6:0] oSeg;                         // g f e d c b a
+assign oSeg = (iA == 4'h0) ? 7'b1000000 :
+              (iA == 4'h1) ? 7'b1111001 :
+              (iA == 4'h2) ? 7'b0100100 :
+              (iA == 4'h3) ? 7'b0110000 :
+              (iA == 4'h4) ? 7'b0011001 :
+              (iA == 4'h5) ? 7'b0010010 :
+              (iA == 4'h6) ? 7'b0000010 :
+              (iA == 4'h7) ? 7'b1111000 :
+              (iA == 4'h8) ? 7'b0000000 :
+              (iA == 4'h9) ? 7'b0011000 :
+              (iA == 4'hA) ? 7'b0001000 :
+              (iA == 4'hB) ? 7'b0000011 :
+              (iA == 4'hC) ? 7'b1000110 :
+              (iA == 4'hD) ? 7'b0100001 :
+              (iA == 4'hE) ? 7'b0000110 :
+                             7'b0001110 ;  // F
+endmodule

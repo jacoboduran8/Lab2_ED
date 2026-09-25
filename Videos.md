@@ -12,3 +12,4 @@
 | Ejercicio 8 | [Ver video](https://youtube.com/shorts/YVMchqNQm44) |
 | Ejercicio 9 | [Ver video](https://youtube.com/shorts/EOu91SD-I2Q) |
 | Ejercicio 10 | [Ver video](https://youtube.com/shorts/31z86pgU_Nw) |
+| Ejercicio 12 | [Ver video](https://youtube.com/shorts/W8UJR_0Cj2M?si=GRC9ZFnsgJppF6S4) |

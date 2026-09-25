@@ -1,0 +1,54 @@
+# Reading C:/altera/13.1/modelsim_ase/win32aloem/modelsim_ase/tcl/vsim/pref.tcl 
+# do Ejercicio13_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.1/Lab2/Ejercicio13 {C:/altera/13.1/Lab2/Ejercicio13/Ejercicio13.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Ejercicio13
+# -- Compiling module op_not
+# -- Compiling module sumador5
+# -- Compiling module op_transfer
+# -- Compiling module op_and
+# -- Compiling module comparador5
+# -- Compiling module mux5a1_6b
+# -- Compiling module deco_hex7seg
+# 
+# Top level modules:
+# 	Ejercicio13
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.1/Lab2/Ejercicio13 {C:/altera/13.1/Lab2/Ejercicio13/tb_Ejercicio13.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_Ejercicio13
+# 
+# Top level modules:
+# 	tb_Ejercicio13
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_Ejercicio13
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_Ejercicio13 
+# Loading work.tb_Ejercicio13
+# Loading work.Ejercicio13
+# Loading work.op_not
+# Loading work.sumador5
+# Loading work.op_transfer
+# Loading work.op_and
+# Loading work.comparador5
+# Loading work.mux5a1_6b
+# Loading work.deco_hex7seg
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break in Module tb_Ejercicio13 at C:/altera/13.1/Lab2/Ejercicio13/tb_Ejercicio13.v line 28
+# Simulation Breakpoint: Break in Module tb_Ejercicio13 at C:/altera/13.1/Lab2/Ejercicio13/tb_Ejercicio13.v line 28
+# MACRO ./Ejercicio13_run_msim_rtl_verilog.do PAUSED at line 17
